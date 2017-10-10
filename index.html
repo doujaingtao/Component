@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>轮播组件</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css" media="screen">
+	*{
+		margin: 0;
+		padding: 0;
+
+	}
+	ul,li{
+		list-style: none; 
+	}
+	#lunbo{
+		border:1px solid #ccc;
+		margin: 0 auto;
+	}
+	#lunbo ul li img{
+		width: 500px;
+		height: 320px;
+	}
+	#lunbo1 ul li img{
+		width: 500px;
+		height: 220px;
+	}
+	.leftBtn{
+		width: 50px;
+		height: 50px;
+		background: blue;
+		position: absolute;
+		left: 0;
+		top: 50%;
+	}
+	.rightBtn{
+		width: 50px;
+		height: 50px;
+		background: blue;
+		position: absolute;
+		right: 0;
+		top: 50%;
+	}
+	.circls{
+		position: absolute;
+		bottom: 10px;
+		left: 100px;
+	}
+	.circls li{
+		float: left;
+		width: 20px;
+		height: 20px;
+		background: yellow;
+		margin-right:10px; 
+	}
+	.circls li.active{
+		background: blue;
+	}
+
+</style>
+</head>
+<body>
+    <div id="lunbo"></div>
+    <div id="lunbo1"></div>
+    <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/banner.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script  type="text/javascript" charset="utf-8" async defer>
+		window.onload=function () {
+			 new Carousel({
+			    "id": "lunbo",
+			    "images": ["img/bg1.jpg", "img/bg2.jpg", "img/bg3.jpg", "img/bg4.jpg", "img/bg5.jpg", "img/bg6.jpg"],
+			    "width": 500,
+			    "height": 320,
+			    "animateDuration": 500,
+			    "interval":1000
+			});
+			 new Carousel({
+				    "id": "lunbo1",
+				    "images": ["img/bg1.jpg", "img/bg2.jpg", "img/bg3.jpg", "img/bg4.jpg"],
+				    "width": 500,
+				    "height": 220,
+				    "animateDuration": 500,
+				    "interval":2000
+				});
+		}
+
+	
+    </script>
+</body>
+</html>
